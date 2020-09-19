@@ -1,0 +1,26 @@
+{
+  "name": "shopping_list",
+  "version": "1.0.0",
+  "description": "Shopping list built with the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sanadwj/MERN-shopping-list.git"
+  },
+  "author": "Sanad Abujbara",
+  "license": "MIT",
+  
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

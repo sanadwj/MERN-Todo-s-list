@@ -13,14 +13,17 @@
   },
   "author": "Sanad Abujbara",
   "license": "MIT",
-  
   "dependencies": {
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.5"
+    "mongoose": "^5.10.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/sanadwj/MERN-shopping-list/issues"
+  },
+  "homepage": "https://github.com/sanadwj/MERN-shopping-list#readme"
 }

@@ -31,10 +31,14 @@ import {Collapse,
               <NavbarToggler onClick={this.toggle}/>
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
-                  <NavItem>
+                  <NavItem >
                     <NavLink href="https://github.com/sanadwj">Github</NavLink>
                   </NavItem>
+                  <NavItem>
+                    <NavLink href="https://www.linkedin.com/in/sanad-abujubara/">Linkedin</NavLink>
+                  </NavItem>
                 </Nav>
+                
               </Collapse>
             </Container>
           </Navbar>

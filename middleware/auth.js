@@ -6,7 +6,7 @@ function auth(req, res, next) {
   const token = req.header('x-auth-token');
 
   //check for token
-  if(!token) res.status(401).json({msg: 'No token, authorizarion denied '})
+  if(!token) return res.status(401).json({msg: 'No token, authorizarion denied '})
   
   
   try {
@@ -15,10 +15,9 @@ function auth(req, res, next) {
     const decoded = jwt.verify(token, config.get('jwtSecret'));
     //add user from payload
     req.user = decoded;
-    next();
-    
+    next(); 
   } catch(e){
-    res.status(400).json({msg: "token is nit valid"})
+    res.status(400).json({msg: "token is not valid"})
   }
 }
 

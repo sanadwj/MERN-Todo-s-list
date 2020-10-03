@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
     return res.status(400).json({msg: 'Please enter all fields'})
   }
 
-  User.findOne({email})
+  User.findOne({ email })
     .then(user => {
       if(!user) return res.status(400).json({msg: 'User Does not exists'})
 
@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
       // Validate password
       bcrypt.compare(password, user.password)
         .then(isMatch => {
-          if(!isMatch) return res.status(400).json({msg: "invalid password"});
+          if(!isMatch) return res.status(400).json({msg: "Invalid password"});
 
           jwt.sign(
             { id: user.id},

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+// import React, {Component} from 'react';
 import AppNavbar from './components/AppNavbar'
 import ShoppingList from './components/ShoppingList'
 import ItemModal from './components/itemModal'
@@ -10,28 +10,26 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import itemModal from './components/itemModal';
 
+import React, { useEffect } from 'react';
 
-class App extends Component {
-  componentDidMount() {
+
+const App = () => {
+  useEffect(() => {
     store.dispatch(loadUser());
-  }
+  }, []);
 
-  render() {
-    return (
-      <Provider store={store}>
+  return (
+    <Provider store={store}>
       <div className="App">
         <AppNavbar />
         <Container>
-        <ItemModal/>
-        <ShoppingList/>
+          <ItemModal />
+          <ShoppingList />
         </Container>
-        
-    </div>
-      </Provider>
-      
-    );
-  }
-  
-}
+      </div>
+    </Provider>
+  );
+};
+
 
 export default App;
